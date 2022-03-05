@@ -26,7 +26,7 @@
 
   <groupId>ru.sber.platformv.faas</groupId>
   <artifactId>faas-sdk-api</artifactId>
-  <version>1.0.0-rc.1-SNAPSHOT</version>
+  <version>1.0.0-rc.1</version>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -47,7 +47,7 @@
     <connection>scm:git:https://github.com/sber-platformv/faas-sdk-java.git</connection>
     <developerConnection>scm:git:git@github.com:sber-platformv/faas-sdk-java.git</developerConnection>
     <url>https://github.com/sber-platformv/faas-sdk-java</url>
-    <tag>HEAD</tag>
+    <tag>faas-sdk-api-1.0.0-rc.1</tag>
   </scm>
 
   <build>
