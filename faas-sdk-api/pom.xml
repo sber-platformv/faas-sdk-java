@@ -22,6 +22,20 @@
     <artifactId>faas-sdk-api</artifactId>
     <version>1.0.0-rc.4-SNAPSHOT</version>
 
+    <name>Faas SDK API for Java</name>
+    <description>Faas SDK API for Java</description>
+    <url>https://github.com/sber-platformv/faas-sdk-java</url>
+    <developers>
+        <developer>
+            <id>kotoant</id>
+            <name>Anton Kotov</name>
+            <url>https://github.com/kotoant</url>
+            <roles>
+                <role>Committer</role>
+            </roles>
+        </developer>
+    </developers>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven-compiler-plugin.version>3.10.0</maven-compiler-plugin.version>
