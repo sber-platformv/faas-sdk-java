@@ -24,9 +24,9 @@
     <version>9</version>
   </parent>
 
-  <groupId>io.github.sber-platformv</groupId>
+  <groupId>ru.sber.platformv.faas</groupId>
   <artifactId>faas-sdk-api</artifactId>
-  <version>1.0.0-rc.2-SNAPSHOT</version>
+  <version>1.0.0-rc.1-SNAPSHOT</version>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
