@@ -30,7 +30,7 @@ that supports Maven to create the Maven project. Add this dependency in the
     <dependency>
       <groupId>io.github.sber-platformv</groupId>
       <artifactId>faas-sdk-api</artifactId>
-      <version>1.0.0-rc.4</version>
+      <version>1.0.0-rc.5</version>
       <scope>provided</scope>
     </dependency>
 ```
