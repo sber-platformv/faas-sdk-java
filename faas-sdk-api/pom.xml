@@ -103,7 +103,6 @@
                             <mavenExecutorId>forked-path</mavenExecutorId>
                             <pomFileName>faas-sdk-api/pom.xml</pomFileName>
                             <useReleaseProfile>false</useReleaseProfile>
-                            <goals>deploy</goals>
                             <arguments>${arguments} -Prelease</arguments>
                         </configuration>
                     </execution>
