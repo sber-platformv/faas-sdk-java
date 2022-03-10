@@ -15,7 +15,8 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.sber-platformv</groupId>
@@ -23,7 +24,7 @@
     <version>1.0.0-rc.5-SNAPSHOT</version>
 
     <name>Faas SDK API for Java</name>
-    <description>Faas SDK API for Java</description>
+    <description>Faas SDK API for Java from Sber Platform V</description>
     <url>https://github.com/sber-platformv/faas-sdk-java</url>
     <developers>
         <developer>
@@ -41,7 +42,7 @@
         <maven-compiler-plugin.version>3.10.0</maven-compiler-plugin.version>
         <maven-javadoc-plugin.version>3.3.2</maven-javadoc-plugin.version>
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
-        <arguments />
+        <arguments/>
     </properties>
 
     <licenses>
@@ -60,6 +61,46 @@
     </scm>
 
     <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>${maven-javadoc-plugin.version}</version>
+                    <configuration>
+                        <quiet>true</quiet>
+                        <notimestamp>true</notimestamp>
+                        <encoding>UTF-8</encoding>
+                        <docencoding>UTF-8</docencoding>
+                        <charset>UTF-8</charset>
+                        <additionalOptions>
+                            <additionalOption>-XDignore.symbol.file</additionalOption>
+                        </additionalOptions>
+                        <linksource>true</linksource>
+                        <source>8</source>
+                        <detectJavaApiLink>false</detectJavaApiLink>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>attach-docs</id>
+                            <phase>post-integration-test</phase>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>2.5.3</version>
+                    <configuration>
+                        <mavenExecutorId>forked-path</mavenExecutorId>
+                        <useReleaseProfile>false</useReleaseProfile>
+                        <arguments>${arguments} -Prelease</arguments>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -89,10 +130,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.5.3</version>
-                <configuration>
-                    <autoVersionSubmodules>true</autoVersionSubmodules>
-                </configuration>
                 <executions>
                     <execution>
                         <id>default</id>
@@ -100,10 +137,7 @@
                             <goal>perform</goal>
                         </goals>
                         <configuration>
-                            <mavenExecutorId>forked-path</mavenExecutorId>
                             <pomFileName>faas-sdk-api/pom.xml</pomFileName>
-                            <useReleaseProfile>false</useReleaseProfile>
-                            <arguments>${arguments} -Prelease</arguments>
                         </configuration>
                     </execution>
                 </executions>
@@ -120,36 +154,6 @@
                 </configuration>
             </plugin>
         </plugins>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>${maven-javadoc-plugin.version}</version>
-                    <configuration>
-                        <quiet>true</quiet>
-                        <notimestamp>true</notimestamp>
-                        <encoding>UTF-8</encoding>
-                        <docencoding>UTF-8</docencoding>
-                        <charset>UTF-8</charset>
-                        <additionalOptions>
-                            <additionalOption>-XDignore.symbol.file</additionalOption>
-                        </additionalOptions>
-                        <linksource>true</linksource>
-                        <source>8</source>
-                        <detectJavaApiLink>false</detectJavaApiLink>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <id>attach-docs</id>
-                            <phase>post-integration-test</phase>
-                            <goals>
-                                <goal>jar</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-            </plugins>
-        </pluginManagement>
     </build>
     <distributionManagement>
         <snapshotRepository>
