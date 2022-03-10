@@ -20,7 +20,7 @@
 
     <groupId>io.github.sber-platformv</groupId>
     <artifactId>faas-sdk-api</artifactId>
-    <version>1.0.0-rc.6-SNAPSHOT</version>
+    <version>1.0.0-rc.5-SNAPSHOT</version>
 
     <name>Faas SDK API for Java</name>
     <description>Faas SDK API for Java</description>
