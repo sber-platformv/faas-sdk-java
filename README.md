@@ -1,6 +1,6 @@
 # Faas SDK for Java
 
-[![Maven Central (functions-framework-api)](https://img.shields.io/maven-central/v/ru.sber.platformv.faas/faas-sdk-api.svg?label=faas-sdk-api)](https://search.maven.org/artifact/ru.sber.platformv.faas/faas-sdk-api)
+[![Maven Central (functions-framework-api)](https://img.shields.io/maven-central/v/io.github.sber-platformv/faas-sdk-api.svg?label=faas-sdk-api)](https://search.maven.org/artifact/io.github.sber-platformv/faas-sdk-api)
 
 [![Java Unit CI](https://github.com/sber-platformv/faas-sdk-java/actions/workflows/unit.yaml/badge.svg)](https://github.com/sber-platformv/faas-sdk-java/actions/workflows/unit.yaml)
 
@@ -28,9 +28,9 @@ that supports Maven to create the Maven project. Add this dependency in the
 
 ```xml
     <dependency>
-      <groupId>ru.sber.paltformv.faas</groupId>
+      <groupId>io.github.sber-platformv</groupId>
       <artifactId>faas-sdk-api</artifactId>
-      <version>1.0.0</version>
+      <version>1.0.0-rc.4</version>
       <scope>provided</scope>
     </dependency>
 ```
