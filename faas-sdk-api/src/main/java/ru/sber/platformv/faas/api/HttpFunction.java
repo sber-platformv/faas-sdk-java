@@ -14,7 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package ru.sber.platformv.faas;
+package ru.sber.platformv.faas.api;
 
 /** Represents a PlatformV Function that is activated by an HTTP request. */
 @FunctionalInterface

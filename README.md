@@ -43,9 +43,9 @@ contents:
 ```java
 package com.example;
 
-import ru.sber.platformv.faas.HttpFunction;
-import ru.sber.platformv.faas.HttpRequest;
-import ru.sber.platformv.faas.HttpResponse;
+import ru.sber.platformv.faas.api.HttpFunction;
+import ru.sber.platformv.faas.api.HttpRequest;
+import ru.sber.platformv.faas.api.HttpResponse;
 
 public class HelloWorld implements HttpFunction {
   @Override
