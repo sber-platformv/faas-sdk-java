@@ -20,6 +20,8 @@
 
 # Maven
 target/
+*.xml.versionsBackup
+dependency-reduced-pom.xml
 
 # Gradle
 .gradle
@@ -47,6 +49,3 @@ properties
 
 # IDE
 .vscode/
-
-# TODO: remove
-invoker/
