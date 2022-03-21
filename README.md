@@ -2,8 +2,8 @@
 
 [![Maven Central (faas-sdk-api)](https://img.shields.io/maven-central/v/ru.sber.platformv.faas/faas-sdk-api.svg?label=faas-sdk-api)](https://search.maven.org/artifact/ru.sber.platformv.faas/faas-sdk-api)
 [![Maven Central (faas-sdk-invoker)](https://img.shields.io/maven-central/v/ru.sber.platformv.faas/faas-sdk-invoker.svg?label=faas-sdk-invoker)](https://search.maven.org/artifact/ru.sber.platformv.faas/faas-sdk-invoker)
-[![Maven Central (faas-sdk-test)](https://img.shields.io/maven-central/v/ru.sber.platformv.faas/faas-sdk-api.svg?label=faas-sdk-test)](https://search.maven.org/artifact/ru.sber.platformv.faas/faas-sdk-test)
-[![Maven Central (faas-maven-plugin)](https://img.shields.io/maven-central/v/ru.sber.platformv.faas/faas-sdk-api.svg?label=faas-maven-plugin)](https://search.maven.org/artifact/ru.sber.platformv.faas/faas-maven-plugin)
+[![Maven Central (faas-sdk-test)](https://img.shields.io/maven-central/v/ru.sber.platformv.faas/faas-sdk-test.svg?label=faas-sdk-test)](https://search.maven.org/artifact/ru.sber.platformv.faas/faas-sdk-test)
+[![Maven Central (faas-maven-plugin)](https://img.shields.io/maven-central/v/ru.sber.platformv.faas/faas-maven-plugin.svg?label=faas-maven-plugin)](https://search.maven.org/artifact/ru.sber.platformv.faas/faas-maven-plugin)
 
 [![Java Unit CI](https://github.com/sber-platformv/faas-sdk-java/actions/workflows/unit.yaml/badge.svg)](https://github.com/sber-platformv/faas-sdk-java/actions/workflows/unit.yaml)
 
