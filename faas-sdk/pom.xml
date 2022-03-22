@@ -110,6 +110,7 @@
                         <mavenExecutorId>forked-path</mavenExecutorId>
                         <useReleaseProfile>false</useReleaseProfile>
                         <arguments>${arguments} -Prelease</arguments>
+                        <autoVersionSubmodules>true</autoVersionSubmodules>
                     </configuration>
                 </plugin>
             </plugins>
