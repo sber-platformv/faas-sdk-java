@@ -151,7 +151,7 @@
                             <goal>perform</goal>
                         </goals>
                         <configuration>
-                            <pomFileName>faas-sdk-api/pom.xml</pomFileName>
+                            <pomFileName>faas-sdk/pom.xml</pomFileName>
                         </configuration>
                     </execution>
                 </executions>
