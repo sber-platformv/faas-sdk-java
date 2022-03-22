@@ -2,8 +2,8 @@ package com.example;
 
 import ru.sber.platformv.faas.test.FunctionApplication;
 
-public class ExampleMainTest {
+public class HelloWorldMainTest {
     public static void main(String[] args) {
-        FunctionApplication.run(Example.class);
+        FunctionApplication.run(HelloWorld.class);
     }
 }

@@ -11,7 +11,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
 @FunctionTest
-class ExampleTest {
+class HelloWorldTest {
     @Test
     void test() {
         given()

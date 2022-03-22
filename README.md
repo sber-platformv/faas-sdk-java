@@ -7,41 +7,39 @@
 
 [![Java Unit CI](https://github.com/sber-platformv/faas-sdk-java/actions/workflows/unit.yaml/badge.svg)](https://github.com/sber-platformv/faas-sdk-java/actions/workflows/unit.yaml)
 
-An open source FaaS (Function as a service) SDK for writing portable
-Java functions -- brought to you by the Platform V Functions team.
+An open source FaaS (Function as a service) SDK for writing portable Java functions -- brought to you by the Platform V
+Functions team.
 
-The Faas SDK lets you write lightweight functions that run in many
-different environments, including:
+The Faas SDK lets you write lightweight functions that run in many different environments, including:
 
-*   [Platform V Functions](https://developers.sber.ru/portal/tools/platform-v-functions)
-*   Your local development machine
+* [Platform V Functions](https://developers.sber.ru/portal/tools/platform-v-functions)
+* Your local development machine
 
 ## Installation
 
 The Faas SDK for Java uses
 [Java](https://java.com/en/download/help/download_options.xml) and
-[Maven](http://maven.apache.org/install.html) (the `mvn` command),
-for building functions from source.
+[Maven](http://maven.apache.org/install.html) (the `mvn` command), for building functions from source.
 
 ## Quickstart: Hello, World on your local machine
 
-A function is typically structured as a Maven project. We recommend using an IDE
-that supports Maven to create the Maven project. Add this dependency in the
+A function is typically structured as a Maven project. We recommend using an IDE that supports Maven to create the Maven
+project. Add this dependency in the
 `pom.xml` file of your project:
 
 ```xml
-    <dependency>
-      <groupId>ru.sber.platformv.faas</groupId>
-      <artifactId>faas-sdk-api</artifactId>
-      <version>1.0.0</version>
-      <scope>provided</scope>
-    </dependency>
+
+<dependency>
+  <groupId>ru.sber.platformv.faas</groupId>
+  <artifactId>faas-sdk-api</artifactId>
+  <version>1.0.0</version>
+  <scope>provided</scope>
+</dependency>
 ```
 
 ### Writing an HTTP function
 
-Create a file `src/main/java/com/example/HelloWorld.java` with the following
-contents:
+Create a file `src/main/java/com/example/HelloWorld.java` with the following contents:
 
 ```java
 package com.example;
@@ -177,3 +175,63 @@ is enough. An example of how this is done is the Faas SDK Invoker jar itself, as
 
 Alternatively, you can arrange for your jar to have its own classpath, as described
 [here](https://maven.apache.org/shared/maven-archiver/examples/classpath.html).
+
+## Testing a function with JUnit 5
+
+The JUnit 5 test framework called `faas-sdk-test` allows you to test functions in unit tests.
+
+### Configuration in `pom.xml`
+
+You should add the following test dependency in `pom.xml`:
+
+```xml
+
+<dependency>
+  <groupId>ru.sber.platformv.faas</groupId>
+  <artifactId>faas-sdk-test</artifactId>
+  <version>1.0.0</version>
+  <scope>test</scope>
+</dependency>
+```
+
+### Writing JUnit 5 test
+
+Write unit test for your http function:
+
+```java
+package com.example;
+
+import io.restassured.http.ContentType;
+import org.eclipse.jetty.http.HttpStatus;
+import org.junit.jupiter.api.Test;
+import ru.sber.platformv.faas.test.junit.FunctionTest;
+
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
+
+@FunctionTest
+class HelloWorldTest {
+  @Test
+  void test() {
+    given()
+            .accept(ContentType.TEXT)
+
+            .when()
+            .get()
+
+            .then()
+            .contentType(ContentType.TEXT)
+            .statusCode(HttpStatus.OK_200)
+            .body(equalTo("Hello, world!"));
+  }
+}
+```
+
+RestAssured testing library is supported of the box, but you can use any test client you want. You should just
+initialize it with correct HTTP server port: you should read it from "faas.test.port" system property before each test.
+
+For more configuration options please see
+[@FunctionTest annotation](faas-sdk/faas-sdk-test/src/main/java/ru/sber/platformv/faas/test/junit/FunctionTest.java).
+
+You can find more test examples
+[here](faas-sdk-examples/http-function/src/test/java/com/example/HelloWorldTest.java).
