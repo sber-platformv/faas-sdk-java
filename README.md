@@ -14,6 +14,7 @@ The Faas SDK lets you write lightweight functions that run in many different env
 
 * [Platform V Functions](https://developers.sber.ru/portal/tools/platform-v-functions)
 * Your local development machine
+* JUnit 5 tests
 
 ## Installation
 
