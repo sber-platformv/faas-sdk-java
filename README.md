@@ -70,7 +70,7 @@ You can configure the plugin in `pom.xml`:
 <plugin>
   <groupId>ru.sber.platformv.faas</groupId>
   <artifactId>faas-maven-plugin</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.0-rc.1</version>
   <configuration>
     <functionTarget>com.example.function.Echo</functionTarget>
   </configuration>
@@ -88,7 +88,7 @@ mvn faas:run
 You can alternatively configure the plugin with properties on the command line:
 
 ```sh
-  mvn ru.sber.platformv.faas:faas-maven-plugin:1.0.0:run \
+  mvn ru.sber.platformv.faas:faas-maven-plugin:1.0.0-rc.1:run \
       -Drun.functionTarget=com.example.function.Echo
 ```
 
@@ -99,7 +99,7 @@ location like this:
 
 ```sh
 mvn dependency:copy \
-    -Dartifact='ru.sber.platformv.faas:faas-sdk-invoker:1.0.0' \
+    -Dartifact='ru.sber.platformv.faas:faas-sdk-invoker:1.0.0-rc.1' \
     -DoutputDirectory=.
 ```
 
@@ -107,7 +107,7 @@ In this example we use the current directory `.` but you can specify any other d
 function:
 
 ```sh
-java -jar faas-sdk-invoker-1.0.0 \
+java -jar faas-sdk-invoker-1.0.0-rc.1 \
     --classpath myfunction.jar \
     --target com.example.HelloWorld
 ```
@@ -150,7 +150,7 @@ automatically computes the classpath based on the dependencies expressed in `pom
 Invoker directly, you must use `--classpath` to indicate how to find the code and its dependencies. For example:
 
 ```
-java -jar faas-sdk-invoker-1.0.0 \
+java -jar faas-sdk-invoker-1.0.0-rc.1 \
     --classpath 'myfunction.jar:/some/directory:/some/library/*' \
     --target com.example.HelloWorld
 ```
@@ -189,7 +189,7 @@ You should add the following test dependency in `pom.xml`:
 <dependency>
   <groupId>ru.sber.platformv.faas</groupId>
   <artifactId>faas-sdk-test</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.0-rc.1</version>
   <scope>test</scope>
 </dependency>
 ```

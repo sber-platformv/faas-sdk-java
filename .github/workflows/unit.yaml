@@ -24,3 +24,5 @@ jobs:
         run: (cd faas-sdk-api/ && mvn install)
       - name: SDK Build and Test with Maven
         run: (cd faas-sdk/ && mvn test)
+      - name: SDK Examples Build and Test with Maven
+        run: (cd faas-sdk-examples/http-function/ && mvn test)

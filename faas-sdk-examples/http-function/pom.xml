@@ -28,7 +28,7 @@
         <dependency>
             <groupId>ru.sber.platformv.faas</groupId>
             <artifactId>faas-sdk-test</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>1.0.0-rc.1</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
