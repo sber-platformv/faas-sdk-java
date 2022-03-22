@@ -228,7 +228,7 @@ class HelloWorldTest {
 }
 ```
 
-RestAssured testing library is supported of the box, but you can use any test client you want. You should just
+RestAssured testing library is supported out of the box, but you can use any test client you want. You should just
 initialize it with correct HTTP server port: you should read it from "faas.test.port" system property before each test.
 
 For more configuration options please see
