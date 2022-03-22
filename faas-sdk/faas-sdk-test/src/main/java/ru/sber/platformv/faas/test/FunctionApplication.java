@@ -77,16 +77,4 @@ public final class FunctionApplication {
             throw new RuntimeException(e);
         }
     }
-
-//    private HttpFunction createFunction(Class<?> functionClass) {
-//        if (!HttpFunction.class.isAssignableFrom(Objects.requireNonNull(functionClass, "functionClass"))) {
-//            throw new IllegalArgumentException("functionClass should implement interface: " + HttpFunction.class);
-//        }
-//        try {
-//            return (HttpFunction) functionClass.getDeclaredConstructor().newInstance();
-//        } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
-//            throw new RuntimeException(
-//                String.format("Class %s should have public empty constructor", functionClass.getName()), e);
-//        }
-//    }
 }

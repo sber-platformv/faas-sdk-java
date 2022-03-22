@@ -455,10 +455,19 @@ public class Invoker {
         protected Class<?> findClass(String name) throws ClassNotFoundException {
             String prefix = "ru.sber.platformv.faas.api.";
             if ((name.startsWith(prefix) && Character.isUpperCase(name.charAt(prefix.length())))
-                || name.startsWith("javax.servlet.")) {
+                || name.startsWith("javax.servlet.")
+                || isSlfj4ApiClass(name)) {
                 return runtimeClassLoader.loadClass(name);
             }
             return super.findClass(name); // should throw ClassNotFoundException
+        }
+
+        private static final String SLF4J_API_PREFIX = "org.slf4j.";
+        private static final int SLF4J_API_PREFIX_LENGTH = SLF4J_API_PREFIX.length();
+
+        private static boolean isSlfj4ApiClass(String name) {
+            return name.startsWith(SLF4J_API_PREFIX)
+                && Character.isUpperCase(name.charAt(SLF4J_API_PREFIX_LENGTH));
         }
 
         private static ClassLoader getSystemOrBootstrapClassLoader() {

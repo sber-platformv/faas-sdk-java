@@ -52,12 +52,14 @@ public class FunctionTestExtension
     public void beforeEach(ExtensionContext context) {
         if (functionApplication != null) {
             RestAssured.port = functionApplication.getPort();
+            System.setProperty(FunctionTest.PORT_PROPERTY, Integer.toString(functionApplication.getPort()));
         }
     }
 
     @Override
     public void afterEach(ExtensionContext context) {
         RestAssured.port = -1;
+        System.clearProperty(FunctionTest.PORT_PROPERTY);
     }
 
     @Override

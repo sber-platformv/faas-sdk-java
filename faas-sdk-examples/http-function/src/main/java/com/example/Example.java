@@ -1,4 +1,4 @@
-package ru.sber.platformv.faas;
+package com.example;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -6,9 +6,9 @@ import ru.sber.platformv.faas.api.HttpFunction;
 import ru.sber.platformv.faas.api.HttpRequest;
 import ru.sber.platformv.faas.api.HttpResponse;
 
-public class HelloWorldHttpFunction implements HttpFunction {
+public class Example implements HttpFunction {
 
-    private final static Logger logger = LoggerFactory.getLogger(HelloWorldHttpFunction.class);
+    private static final Logger logger = LoggerFactory.getLogger(Example.class.getName());
 
     @Override
     public void service(HttpRequest request, HttpResponse response) throws Exception {
