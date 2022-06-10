@@ -20,7 +20,7 @@
 
     <groupId>ru.sber.platformv.faas</groupId>
     <artifactId>faas-sdk-api</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
 
     <name>Platform V Faas Java SDK API</name>
     <description>Faas SDK API for Java from Sber Platform V</description>
