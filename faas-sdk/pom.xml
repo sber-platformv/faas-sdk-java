@@ -3,7 +3,7 @@
 
     <groupId>ru.sber.platformv.faas</groupId>
     <artifactId>faas-sdk-parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Platform V Faas Java SDK Parent</name>
     <description>
@@ -33,7 +33,6 @@
     </modules>
 
     <properties>
-        <maven.javadoc.skip>true</maven.javadoc.skip>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
         <maven-javadoc-plugin.version>3.3.2</maven-javadoc-plugin.version>
@@ -54,7 +53,7 @@
             <dependency>
                 <groupId>ru.sber.platformv.faas</groupId>
                 <artifactId>faas-sdk-api</artifactId>
-                <version>1.0.0</version>
+                <version>1.0.1</version>
             </dependency>
             <dependency>
                 <groupId>ru.sber.platformv.faas</groupId>
@@ -161,7 +160,7 @@
                 <configuration>
                     <serverId>ossrh</serverId>
                     <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                    <autoReleaseAfterClose>false</autoReleaseAfterClose>
                 </configuration>
             </plugin>
         </plugins>
