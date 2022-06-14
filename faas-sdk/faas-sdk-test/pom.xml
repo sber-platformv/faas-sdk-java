@@ -5,12 +5,12 @@
     <parent>
         <groupId>ru.sber.platformv.faas</groupId>
         <artifactId>faas-sdk-parent</artifactId>
-        <version>1.0.1-SNAPSHOT</version>
+        <version>1.0.1</version>
     </parent>
 
     <groupId>ru.sber.platformv.faas</groupId>
     <artifactId>faas-sdk-test</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
 
     <name>Platform V Faas Java SDK Test</name>
 
