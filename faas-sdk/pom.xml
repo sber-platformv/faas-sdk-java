@@ -3,7 +3,7 @@
 
     <groupId>ru.sber.platformv.faas</groupId>
     <artifactId>faas-sdk-parent</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Platform V Faas Java SDK Parent</name>
     <description>

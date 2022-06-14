@@ -5,12 +5,12 @@
     <parent>
         <groupId>ru.sber.platformv.faas</groupId>
         <artifactId>faas-sdk-parent</artifactId>
-        <version>1.0.2-SNAPSHOT</version>
+        <version>1.0.1-SNAPSHOT</version>
     </parent>
 
     <groupId>ru.sber.platformv.faas</groupId>
     <artifactId>faas-sdk-testfunction</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>Platform V Faas Java SDK Test Function</name>
     <description>
         An example of a Platform V Faas Java function packaged into a jar. We use this in tests.

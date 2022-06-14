@@ -4,12 +4,12 @@
     <parent>
         <groupId>ru.sber.platformv.faas</groupId>
         <artifactId>faas-sdk-parent</artifactId>
-        <version>1.0.2-SNAPSHOT</version>
+        <version>1.0.1-SNAPSHOT</version>
     </parent>
 
     <groupId>ru.sber.platformv.faas</groupId>
     <artifactId>faas-sdk-invoker</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>Platform V Faas Java SDK Invoker</name>
     <description>
         Application that invokes a Platform V Java function. This application is a
@@ -108,7 +108,7 @@
         <dependency>
             <groupId>ru.sber.platformv.faas</groupId>
             <artifactId>faas-sdk-testfunction</artifactId>
-            <version>1.0.2-SNAPSHOT</version>
+            <version>1.0.1-SNAPSHOT</version>
             <type>test-jar</type>
             <scope>test</scope>
         </dependency>
