@@ -33,7 +33,6 @@
     </modules>
 
     <properties>
-        <maven.javadoc.skip>true</maven.javadoc.skip>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
         <maven-javadoc-plugin.version>3.3.2</maven-javadoc-plugin.version>
