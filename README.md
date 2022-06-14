@@ -19,7 +19,7 @@ SDK для Java может быть подключен как плагин ил�
     <dependency>
       <groupId>ru.sber.platformv.faas</groupId>
       <artifactId>faas-sdk-api</artifactId>
-      <version>1.0.0</version>
+      <version>1.0.1</version>
       <scope>provided</scope>
     </dependency>
     ```
@@ -70,7 +70,7 @@ SDK для Java может быть подключен как плагин ил�
     <plugin>
       <groupId>ru.sber.platformv.faas</groupId>
       <artifactId>faas-maven-plugin</artifactId>
-      <version>1.0.0</version>
+      <version>1.0.1</version>
       <configuration>
         <target>handlers.Handler</target>
         <port>8080</port>
@@ -104,7 +104,7 @@ SDK для Java может быть подключен как плагин ил�
 1. В CLI перейдите в папку проекта и запустите плагин следующей командой:
     
     ```shell
-     mvn ru.sber.platformv.faas:faas-maven-plugin:1.0.0:run -Drun.target=handlers.Handler -Drun.port=8080
+     mvn ru.sber.platformv.faas:faas-maven-plugin:1.0.1:run -Drun.target=handlers.Handler -Drun.port=8080
     ```
    , где:
    * `-Drun.target` — класс, имплементирующий интерфейс `HttpFunction` пакета `ru.sber.platformv.faas.api.HttpFunction`;
@@ -127,7 +127,7 @@ SDK для Java может быть подключен как плагин ил�
 2. В CLI перейдите в эту директорию и выполните следующую команду:
     
     ```shell
-    mvn dependency:copy -Dartifact='ru.sber.platformv.faas:faas-sdk-invoker:1.0.0' -DoutputDirectory=.
+    mvn dependency:copy -Dartifact='ru.sber.platformv.faas:faas-sdk-invoker:1.0.1' -DoutputDirectory=.
     ```
    
    Эта команда загрузит .jar сервера в текущую директорию. Вы также можете изменить директорию, в которую хотите загрузить .jar, указав путь до нее в значение параметра `-DoutputDirectory`.
@@ -135,7 +135,7 @@ SDK для Java может быть подключен как плагин ил�
 3. Запустите сервер с функцией, выполнив в CLI следующую команду:
    
    ```shell
-   java -jar faas-sdk-invoker-1.0.0.jar --classpath myfunction.jar --target handlers.Handler --port 8080
+   java -jar faas-sdk-invoker-1.0.1.jar --classpath myfunction.jar --target handlers.Handler --port 8080
    ```
    , где:
    * `--classpath` — путь до кода функции и ее зависимостей. Если вы используете не "толстый" .jar файл функции, вам понадобится указать путь согласно инструкции команды [java -classpath](https://docs.oracle.com/en/java/javase/13/docs/specs/man/java.html#standard-options-for-java);
@@ -174,7 +174,7 @@ SDK для Java может быть подключен как плагин ил�
 
 ```
     my-folder 
-     ├ faas-sdk-invoker-1.0.0.jar     
+     ├ faas-sdk-invoker-1.0.1.jar     
      │
      ├ myfunction.jar                     
      │
@@ -194,7 +194,7 @@ SDK для Java может быть подключен как плагин ил�
 <dependency>
   <groupId>ru.sber.platformv.faas</groupId>
   <artifactId>faas-sdk-test</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <scope>test</scope>
 </dependency>
 ```

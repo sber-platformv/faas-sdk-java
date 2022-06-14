@@ -3,7 +3,7 @@
 
     <groupId>ru.sber.platformv.faas</groupId>
     <artifactId>faas-sdk-parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Platform V Faas Java SDK Parent</name>
     <description>
@@ -54,7 +54,7 @@
             <dependency>
                 <groupId>ru.sber.platformv.faas</groupId>
                 <artifactId>faas-sdk-api</artifactId>
-                <version>1.0.0</version>
+                <version>1.0.1</version>
             </dependency>
             <dependency>
                 <groupId>ru.sber.platformv.faas</groupId>
@@ -161,7 +161,7 @@
                 <configuration>
                     <serverId>ossrh</serverId>
                     <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                    <autoReleaseAfterClose>false</autoReleaseAfterClose>
                 </configuration>
             </plugin>
         </plugins>
